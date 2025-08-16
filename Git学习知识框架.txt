@@ -1,0 +1,85 @@
+Git 学习知识框架
+
+ 一、基础操作
+
+ 1. 进入文件夹   "cd 路径"    进入指定文件夹。
+
+ 2. 查看文件夹内容  "dir"    查看当前目录下所有文件和文件夹。
+
+ 3. 返回上一级目录  "cd .."    返回上一级文件夹。
+
+ 4. 清屏  "cls"    清理命令行界面。
+
+
+ 二、Git 仓库操作
+
+ 1. 克隆远程仓库  "git clone 仓库地址"    例如："git clone https://github.com/Hanfish/hellogithub.git"
+
+ 2. 查看仓库状态  "git status"    查看文件修改情况、分支状态等。
+
+ 3. 修改文件   使用文本编辑器修改仓库中的文件（如 README.md）。
+
+ 4. 添加修改到暂存区  "git add 文件名"    例如："git add README.md"
+                                "git add ."    添加所有修改的文件。
+
+ 5. 提交修改  "git commit m "描述信息""    例如："git commit m "更新了README.md""
+
+ 6. 推送到远程仓库  "git push"    将本地提交同步到远程仓库（如 GitHub）。
+
+
+ 三、分支管理
+
+ 1. 查看本地分支  "git branch"    显示所有本地分支，当前分支前有 *。
+
+ 2. 创建新分支  "git branch 分支名"    例如："git branch dev"
+
+ 3. 切换分支  "git checkout 分支名"    例如："git checkout dev"
+                   "git switch 分支名"    现代命令，等效于上面。
+
+ 4. 创建并切换到新分支  "git checkout b 分支名"    例如："git checkout b featuredemo"
+                                    "git switch c 分支名"    等效于上面。
+
+
+ 四、分支合并
+
+ 1. 合并分支内容 先切换到目标分支（如 main）：  "git checkout main"
+     合并另一个分支（如 dev）：  "git merge dev"   解决冲突后提交：
+     "git add ."
+    "git commit m "解决了合并冲突""
+
+
+ 五、查看历史记录
+
+ 1. 查看详细提交历史  "git log"
+
+ 2. 简洁显示提交历史  "git log oneline"
+
+ 3. 图形化显示分支和合并历史  "git log graph"
+
+
+ 六、远程协作流程
+
+ 1. 拉取远程最新内容  "git pull"
+
+ 2. 团队开发常见流程
+1. 拉取最新内容："git pull"
+2. 创建自己的分支开发："git checkout b myfeature"
+3. 修改并提交："git add ." →"git commit m "描述""
+4. 推送到远程："git push origin myfeature"
+5. 在 GitHub 上发起 Pull Request（PR），团队评审并合并。
+
+
+ 七、常见报错及解决方法
+
+ 1. fatal: not a git repository
+ 原因：当前目录不是仓库，需进入具体仓库文件夹。
+
+ 2. 文件名大小写不一致导致 add 失败
+ 解决：用正确文件名（如 README.md）。
+
+
+ 八、学习建议
+
+ 每个命令多练几遍，形成肌肉记忆。
+ 多与他人协作，实践分支管理和 PR 流程。
+ 遇到问题及时查文档或截图询问。
